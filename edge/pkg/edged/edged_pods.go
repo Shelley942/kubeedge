@@ -87,7 +87,7 @@ const (
 	podKillingChannelCapacity = 50
 )
 
-// GetActivePods returns non-terminal pods
+// GetActivePods returns non-terminal pods 得到活着的节点
 func (e *edged) GetActivePods() []*v1.Pod {
 	allPods := e.podManager.GetPods()
 	activePods := e.filterOutTerminatedPods(allPods)
