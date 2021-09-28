@@ -150,6 +150,7 @@ func (e *edged) GeneratePodHostNameAndDomain(pod *v1.Pod) (string, string, error
 }
 
 // Get a list of pods that have data directories.
+//得到有数据目录的节点列表
 func (e *edged) listPodsFromDisk() ([]types.UID, error) {
 	podInfos, err := ioutil.ReadDir(e.getPodsDir())
 	if err != nil {
